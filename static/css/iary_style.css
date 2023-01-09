@@ -1,0 +1,108 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Open sans';
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 204, 167, 1)
+}
+
+body>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+/* box 총크기 */
+/* .wrapper {
+    width: 900px;
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .05);
+    overflow: hidden;
+} */
+/* 로고  */
+div.div_id_title{
+    padding: 20px 0;
+}
+/* h1.title {
+    padding: 15px 0;
+    margin-left: 105px;
+    font-weight: normal;
+    color: rgba(57, 50, 173, 1)
+} */
+/* 몸통 폼 총크기 */
+table.form.form-table {
+    padding: 100px;
+    width: 100%;
+    height: 50px;
+}
+
+.myform {
+    background: #F4F5F7;
+    padding: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px
+}
+/* 폼 띄어스기? */
+.myform label {
+    display: block;
+    color: #A8AAC5;
+    font-weight: bold;
+    font-size: .8rem;
+    margin-bottom: 10px;
+}
+/* title 칸 */
+.myform input {
+    border: 0;
+    outline: 0;
+    height: 50px;
+    background: #FFF;
+    width: 100%;
+    border-radius: 5px;
+    color: #155BDA;
+    font-weight: 700;
+    font-size: .9rem;
+    text-indent: 15px;
+    border: 2px solid transparent;
+    transition: border 250ms;
+}
+
+.full-width {
+    grid-column: -1 / 1
+}
+
+.button {
+    grid-column: -1 / 1;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 10px;
+}
+
+.button button {
+    border: 0;
+    outline: 0;
+    width: 120px;
+    height: 50px;
+    border-radius: 50px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: .9rem;
+    cursor: pointer;
+    background: linear-gradient(356deg, rgba(57, 50, 173, 1) 0%, rgba(87, 50, 173, 1) 100%);
+}
+
+.button button:hover {
+    background: rgba(57, 50, 173, 1);
+}

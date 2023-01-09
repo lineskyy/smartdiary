@@ -1,0 +1,42 @@
+{% extends 'cal/cal_base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+Event
+{% endblock title %}
+
+<h1>메모글 작성</h1>
+<p>by {{ user }}</p>
+{% block content %}
+
+<div class="clearfix">
+    <a class="btn btn-info left" href="{% url 'cal:calendarr' %}"> Calendar </a>
+</div>
+
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                {{ field.label }} <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            {{ field.label }} <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+<form method="post">
+    
+    <table class="form form-table">
+        {% csrf_token %}
+        {{ form }}
+    <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Submit </button></td></tr>
+    </table>
+</form>
+{% endblock content %}
+
+{% block script %}
+<link rel="stylesheet" href="{% static 'css/iary_style.css' %}">
+{% endblock script %}
